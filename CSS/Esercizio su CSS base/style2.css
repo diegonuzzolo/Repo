@@ -1,0 +1,14 @@
+section{
+    text-align: justify;
+
+}
+
+p{
+    font-size: 20px;
+    
+}
+
+span{
+    /* font-size: 2em; em e' una misura il cui valore indica il numero di proporsioni */
+    font-size: 2rem;
+}
