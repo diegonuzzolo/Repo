@@ -156,12 +156,14 @@ namespace SiansDataCollection
 
     }
 
-    public static class MergeSort
+    public static class SsSort
     {
+
+        private static int[] array = [];
+
 
         private static void Reverse(SsArray a)
         {
-
             Object[] a1 = new object[a.Length];
             int l = a.Length - 1;
             for (int i = 0; i < a.Length - 1; i++)
@@ -170,11 +172,11 @@ namespace SiansDataCollection
             }
             a.Data = a1;
         }
-        public static int[] Array(int[] a)
-        {
 
+        private static int[] IntArray()
+        {
             SsArray Sarray = new SsArray(true);
-            Sarray.Concat(a);
+            Sarray.Concat(array);
             try { foreach (int e in Sarray.Data) { }; }
             catch (Exception ex)
             {
@@ -213,7 +215,22 @@ namespace SiansDataCollection
             Reverse(Sarray);
             return Sarray.ToIntArray();
         }
+        public static int[] Array
+        { set { array = value; array = IntArray(); } }
+        public static int[] SortedArray
+        {
+            get { return array; }
+        }
+    }
 
+
+    public static class HashTables
+    {
+        public static int Array()
+        {
+
+            return 0;
+        }
     }
 
 
