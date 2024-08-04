@@ -3,9 +3,6 @@ Salve! come si può intuire dal titolo, questo è il repository che uso per cari
 Implemento applicazioni web in **React.js** e utilizzo **ASP.Net core C# web API** come backend. 
 ***
 
-## My data structure
-Il linguaggio che in questi giorni utilizzo per lavorare sulle strutture dati è C#
-***
 
 ## My frontend app
 
