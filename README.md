@@ -1,6 +1,6 @@
 # Introduction to my web development
-Salve! come si può intuire dal titolo, questo è il repository che uso per caricare tutti i giorni i progetti che sviluppo per migliroare le mie skills. Rimangono file **JavaScript** in programmazione funzionale e paradigma di programmazione orientato agli oggetti (OOP)  commentati;
-Implemento applicazioni web in **React.js** e utilizzo **ASP.Net core C# web API** come backend. 
+Salve! come si può intuire dal titolo, questo è il repository che uso per caricare tutti i giorni i progetti che sviluppo per migliroare le mie skills. Rimangono file **JavaScript** in programmazione funzionale e paradigma di programmazione orientato agli oggetti (OOP) ;
+Implemento applicazioni web in **React.js** .
 ***
 
 
