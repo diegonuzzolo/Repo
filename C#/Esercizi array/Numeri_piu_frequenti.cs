@@ -5,8 +5,9 @@ internal class Program
     static void Main()
     {
         int[] array1 = Numero.GetMaxFrequenti(array, 3);
-        foreach(int elemento in array1){
-           Console.WriteLine(elemento);
+        foreach (int elemento in array1)
+        {
+            Console.WriteLine(elemento);
         }
     }
 }
