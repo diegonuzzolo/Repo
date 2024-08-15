@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/diego/Documenti/develop/Repo/C#/Program/Program.csproj": {}
+    "/home/diego/Documenti/development/Repo/C#/Program/Program.csproj": {}
   },
   "projects": {
-    "/home/diego/Documenti/develop/Repo/C#/Program/Program.csproj": {
+    "/home/diego/Documenti/development/Repo/C#/Program/Program.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/diego/Documenti/develop/Repo/C#/Program/Program.csproj",
+        "projectUniqueName": "/home/diego/Documenti/development/Repo/C#/Program/Program.csproj",
         "projectName": "Program",
-        "projectPath": "/home/diego/Documenti/develop/Repo/C#/Program/Program.csproj",
+        "projectPath": "/home/diego/Documenti/development/Repo/C#/Program/Program.csproj",
         "packagesPath": "/home/diego/.nuget/packages/",
-        "outputPath": "/home/diego/Documenti/develop/Repo/C#/Program/obj/",
+        "outputPath": "/home/diego/Documenti/development/Repo/C#/Program/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/diego/.nuget/NuGet/NuGet.Config"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
