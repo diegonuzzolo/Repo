@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 
@@ -10,12 +9,12 @@
 
 <body>
     <?php
-
-   	    
-        phpinfo();
-
-
-
+        // funzione esponenziale
+        echo pow(2,7);
+        echo "<br>";
+        echo rand(1, 1000);
+        echo "<br>";
+        echo sqrt(9);
     ?>
 </body>
 

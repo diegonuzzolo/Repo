@@ -10,11 +10,18 @@
 
 <body>
     <?php
+    $x = "uno";
+    echo $x."<br>";
 
-   	    
-        phpinfo();
+    function convert_to_number(){
+        global $x; // questa dichiarazione rende la variabile x visibile a livello globale
+        $x = 1;
 
+    }
 
+    convert_to_number();
+
+    echo $x;
 
     ?>
 </body>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 
@@ -11,10 +10,12 @@
 <body>
     <?php
 
-   	    
-        phpinfo();
+        $number = 10;
+        echo $number;
 
+        define("NAME", "Diego");
 
+        echo "<br>".NAME;
 
     ?>
 </body>

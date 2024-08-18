@@ -11,8 +11,13 @@
 <body>
     <?php
 
-   	    
-        phpinfo();
+   	    $list = [rand(1, 500), rand(1, 500), rand(1, 500), rand(1, 500)];
+        echo max($list);
+        echo "<br>";
+        echo min($list);
+        echo "<br>";
+        sort($list);
+        echo print_r($list);
 
 
 

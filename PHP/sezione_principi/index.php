@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 
@@ -10,10 +9,12 @@
 
 <body>
     <?php
+    // array di oggetti
+    $numberList = array();
+    // un altro modo per definire un array 
+    $numberList = [1, 3, 4, '1234', '<h1>Ciao mondo</h1>'];
 
-   	    
-        phpinfo();
-
+    echo $numberList[4];
 
 
     ?>
