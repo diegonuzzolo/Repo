@@ -1,45 +1,45 @@
 
-
-
 <!DOCTYPE html>
 <html lang="it">
 
 <head>
-    <?php 
+    <?php
     require "db.php";
-    require "functions.php";
-
-
     ?>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crea utente</title>
+    <title>Verifica credenziali</title>
 </head>
 
 <?php
     
-
-// verifica dei dati ricevuti sul server dal client
-if(isset($_POST['submit'])){
+    if(isset($_POST['submit'])){
         $username = $_POST['username'];
         $password = $_POST['password'];
-        $username = mysqli_real_escape_string($connection, $username);
-        $password = mysqli_real_escape_string($connection, $password);
 
+        $query = "SELECT salt, password from utenti where username = '$username' ";
 
-        
-        $salt = openssl_random_pseudo_bytes(16); // valore binario
-        $hashed_password = hash('sha512', $password . $salt);
+        $result = $connection->query($query);
+        if ($result) {
+            $array = $result->fetch_assoc();
+            $salt_hex = $array['salt'];
+            $hashed_password = $array['password'];
+            $salt = hex2bin($salt_hex);
 
-          $salt_hex = bin2hex($salt); // convertire da binario a esadecimale il salt
-         
-    queryInsert($username, $hashed_password, $salt_hex);   
+            $input_hash = hash('sha512', $password . $salt);
 
+            if ($input_hash === $hashed_password) {
+                echo "Password corretta!";
+            } else {
+                echo "Password errata.";
+            }
 
-    
-        
-}
+        }else{die('query invalida: '.$connection->error);}
+
+    }
+
 
 ?>
 
@@ -47,7 +47,7 @@ if(isset($_POST['submit'])){
     
     <div class="container">
         <div class="col-xs-6">
-            <form action="login_create.php" method="post">
+            <form action="login_verify.php" method="post">
                 
                 <div class="form-group">
                     <label for="username">Username</label>
@@ -59,15 +59,13 @@ if(isset($_POST['submit'])){
                     <input type="password" class="form-control" name="password">
                 </div>
                 <br>
-                <input type="submit" name="submit" class="btn btn-primary">
+                <input type="submit" value="Verifica" name="submit" class="btn btn-primary">
             </form>
         </div>
     </div>
-
 
 
     
 </body>
 
 </html>
-
